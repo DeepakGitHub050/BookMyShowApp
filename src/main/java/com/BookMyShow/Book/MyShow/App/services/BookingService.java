@@ -42,7 +42,7 @@ public class BookingService {
         if(!show.isPresent())
             throw new ShowNotFound();
 
-        List<ShowSeat> reserveSeats = reserveShowSeats(request.getShowId());
+        List<ShowSeat> reserveSeats = reserveShowSeats(request.getShowSeatIds());
 
         return reserveBooking(request, user, reserveSeats);
     }
